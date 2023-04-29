@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/compat/firestore'
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { User } from '../models/User';
 
 @Injectable({
@@ -16,14 +16,18 @@ export class UserService {
   }
 
   getAll() {
-
+    return this.afs.collection<User>(this.collectionName).valueChanges();
   }
 
-  update() {
-
+  getById(id: string) {
+    return this.afs.collection<User>(this.collectionName).doc(id).valueChanges();
   }
 
-  delete() {
+  update(user: User) {
+    return this.afs.collection<User>(this.collectionName).doc(user.id).set(user);
+  }
 
+  delete(id: string) {
+    return this.afs.collection<User>(this.collectionName).doc(id).delete();
   }
 }

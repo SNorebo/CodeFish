@@ -43,7 +43,7 @@ export class SignupComponent {
         console.log('User added successfully.');
       }).catch(error => {
         console.error(error);
-      })
+      }) 
     }).catch(error => {
       console.error(error);
     });

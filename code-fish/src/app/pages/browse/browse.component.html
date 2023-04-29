@@ -1,1 +1,13 @@
-<p>browse works!</p>
+<mat-card *ngFor="let supply of fishingSupplies">
+  <mat-card>
+    <ng-container *ngIf="isImageLoaded(supply)">
+        <img mat-card-image [src]="supply.image_url" width="200px"/>
+    </ng-container>
+    <mat-card-content>
+      <h2 mat-card-title>{{ supply.name }}</h2>
+      <p mat-card-subtitle>{{ supply.description }}</p>
+      <p>Price: {{ supply.price }}</p>
+    </mat-card-content>
+  </mat-card>
+</mat-card>
+  

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { BrowseRoutingModule } from './browse-routing.module';
 import { BrowseComponent } from './browse.component';
-
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -11,7 +11,8 @@ import { BrowseComponent } from './browse.component';
   ],
   imports: [
     CommonModule,
-    BrowseRoutingModule
+    BrowseRoutingModule,
+    MatCardModule
   ]
 })
 export class BrowseModule { }
