@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "codefish-df1fd": {
+      "hosting": {
+        "code-fish": [
+          "codefish-df1fd"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "codefish-df1fd"
+  }
+}
