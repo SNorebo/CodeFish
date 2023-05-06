@@ -27,9 +27,7 @@ export class SignupComponent {
   }
 
   onSubmit() {
-    console.log(this.signUpForm.value);
     this.authService.signup(this.signUpForm.get('email')?.value as string, this.signUpForm.get('password')?.value as string).then(cred => {
-      console.log(cred);
       const user: User = {
         id: cred.user?.uid as string,
         email: this.signUpForm.get('email')?.value as string,

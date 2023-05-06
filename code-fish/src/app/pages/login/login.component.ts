@@ -21,7 +21,6 @@ export class LoginComponent {
     this.loading = true;
     
     this.authService.login(this.email.value as string, this.password.value as string).then(cred => {
-      console.log(cred);
       this.router.navigateByUrl('/main');
       this.loading = false;
     }).catch(error => {

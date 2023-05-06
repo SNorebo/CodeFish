@@ -31,7 +31,6 @@ export class AppComponent implements OnInit {
     });
     this.authService.isUserLoggedIn().subscribe(user => {
       this.loggedInUser = user;
-      console.log(user);
       localStorage.setItem('user', JSON.stringify(this.loggedInUser));
     }, error => {
       console.error(error);

@@ -1,3 +1,11 @@
 .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 90vh;
+}
+
+.content span {
+    text-align: center;
+    font-size: 24px;
 }
