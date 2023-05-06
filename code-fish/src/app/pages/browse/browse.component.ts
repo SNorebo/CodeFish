@@ -9,6 +9,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./browse.component.scss']
 })
 export class BrowseComponent implements OnInit {
+
   fishingSupplies?: Array<Item>;
   loadedImages: {[key: string]: boolean} = {};
 
@@ -32,5 +33,9 @@ export class BrowseComponent implements OnInit {
 
   isImageLoaded(item: Item): boolean {
     return this.loadedImages[item.id] ?? false;
+  }
+
+  addToCart(item: Item) {
+    
   }
 }

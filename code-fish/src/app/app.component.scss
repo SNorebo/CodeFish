@@ -1,12 +1,3 @@
-a {
-    text-decoration: none;
-    color: white;
-}
-
-a:hover, a:active {
-    color: rgb(85, 153, 242);
-}
-
 .navigation-items {
     list-style: none;
     padding: 0;
@@ -15,4 +6,12 @@ a:hover, a:active {
 
 mat-sidenav {
     width: 250px;
+}
+
+mat-button {
+    font-size: 2em;
+}
+
+.title span {
+    margin: 0 10px;
 }

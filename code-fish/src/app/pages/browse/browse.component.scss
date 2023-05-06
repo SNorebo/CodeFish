@@ -1,0 +1,43 @@
+.card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card-container {
+    margin: 10px;
+}
+
+.card-content {
+    width: 400px;
+    height: 400px;
+}
+
+.item-image {
+    margin: 5px auto;
+    width: 200px;
+}
+
+mat-card-actions {
+    position: absolute;
+    bottom: 10px;
+    left: 120px;
+}
+
+.price {
+    position: absolute;
+    bottom: 25px;
+    left: 20px;
+}
+
+.supply-name {
+    border-bottom: 0.5px solid black;
+}
+
+.even-row {
+    border: 1px solid blue;
+}
+
+.odd-row {
+    border: 1px solid purple;
+}

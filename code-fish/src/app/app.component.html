@@ -15,18 +15,20 @@
           <mat-icon>menu</mat-icon>
         </button>
       </div>
-      <div>CodeFish</div>
+      <div class="title" [ngStyle]="{'font-size': '20px', 'display': 'flex', 'align-items': 'center'}">
+        <mat-icon>sailing</mat-icon>
+        <span>CodeFish</span>
+      </div>
       <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
-        <ul fxLayout fxLayoutGap="10px" class="navigation-items">
-          <li><a routerLink="/main">Main</a></li>
-          <li><a routerLink="/browse">Browse</a></li>
-          <li *ngIf="loggedInUser"><a routerLink="/cart">Cart</a></li>
-          <li *ngIf="loggedInUser"><a routerLink="/checkout">Checkout</a></li>
-          <li><a routerLink="/about">About</a></li>
-          <li *ngIf="!loggedInUser"><a routerLink="/login">Login</a></li>
-          <li *ngIf="loggedInUser"><a routerLink="/login" (click)="logout()">Logout</a></li>
-          <li *ngIf="!loggedInUser"><a routerLink="/signup">Sign up</a></li>
-        </ul>
+        <div fxLayout fxLayoutGap="10px">
+          <button mat-button routerLink="/main">Main</button>
+          <button mat-button routerLink="/browse">Browse</button>
+          <button mat-button *ngIf="loggedInUser" routerLink="/cart">Cart</button>
+          <button mat-button routerLink="/about">About</button>
+          <button mat-button *ngIf="!loggedInUser" routerLink="/login">Login</button>
+          <button mat-button *ngIf="loggedInUser" routerLink="/login" (click)="logout()">Logout</button>
+          <button mat-button *ngIf="!loggedInUser" routerLink="/signup">Sign up</button>
+        </div>
       </div>
     </mat-toolbar>
     <router-outlet></router-outlet>

@@ -1,13 +1,18 @@
-<mat-card *ngFor="let supply of fishingSupplies">
-  <mat-card>
-    <ng-container *ngIf="isImageLoaded(supply)">
-        <img mat-card-image [src]="supply.image_url" width="200px"/>
-    </ng-container>
-    <mat-card-content>
-      <h2 mat-card-title>{{ supply.name }}</h2>
-      <p mat-card-subtitle>{{ supply.description }}</p>
-      <p>Price: {{ supply.price }}</p>
-    </mat-card-content>
+<div class="card-wrapper">
+  <mat-card class="card-container" *ngFor="let supply of fishingSupplies; let i = index">
+    <mat-card class="card-content" [ngClass]="{'even-row': i % 2 === 0, 'odd-row': i % 2 !== 0}">
+      <ng-container *ngIf="isImageLoaded(supply)">
+          <img class="item-image" mat-card-image [src]="supply.image_url" alt="image"/>
+      </ng-container>
+      <mat-card-content>
+        <h2 mat-card-title class="supply-name">{{ supply.name }}</h2>
+        <p mat-card-subtitle>{{ supply.description }}</p>
+        <p class="price">Price: {{ supply.price }} Ft</p>
+      </mat-card-content>    
+      <mat-card-actions>
+        <button mat-raised-button (click)="addToCart(supply)">Add to Cart</button>
+      </mat-card-actions>
+    </mat-card>
   </mat-card>
-</mat-card>
-  
+</div>
+
